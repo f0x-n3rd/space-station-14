@@ -860,3 +860,43 @@
   components:
   - type: HitscanBatteryAmmoProvider
     proto: RedHeavyLaser
+
+- type: entity
+  name: ExperimentalLaserDrill
+  parent: [BaseWeaponBattery, BaseCargoContraband]
+  id: ExperimentalLaserDrill
+  description: An experimental laser drill that can destroy ores and structures easily with the help of a powerful beam. Has an internal battery capable of self-recharging. It is not powerful enough to be used as a weapon though. Protoype Model, does not have the tractor beam function yet.
+  components:
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/experimental_laser_drill.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-2
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Gun
+    fireRate: 0.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedHeavyLaser
+    fireCost: 100
+  - type: Battery
+    maxCharge: 1500
+    startingCharge: 1500
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+    autoRechargePause: true
+    autoRechargePauseTime: 30
