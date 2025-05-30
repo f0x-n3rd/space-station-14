@@ -862,7 +862,7 @@
     proto: RedHeavyLaser
 
 - type: entity
-  name: ExperimentalLaserDrill
+  name: experimental laser drill
   parent: [BaseWeaponBattery, BaseCargoContraband]
   id: ExperimentalLaserDrill
   description: An experimental laser drill that can destroy ores and structures easily with the help of a powerful beam. Has an internal battery capable of self-recharging. It is not powerful enough to be used as a weapon though. Protoype Model, does not have the tractor beam function yet.
@@ -871,8 +871,8 @@
     size: Ginormous
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
-    walkModifier: 0.6
-    sprintModifier: 0.6
+    walkModifier: 0.7
+    sprintModifier: 0.7
   - type: HeldSpeedModifier
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/experimental_laser_drill.rsi
