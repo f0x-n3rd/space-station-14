@@ -1,0 +1,44 @@
+- type: entity
+  name: experimental trigger module
+  parent: BaseItem
+  id: ExperimentalTriggerModule
+  description: A part of the experimental laser drill that handles the trigger mechanism and connects to the power module. Useless on its own. Connects to the power module.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+    state: trigger-module
+
+- type: entity
+  name: experimental power module
+  parent: BaseItem
+  id: ExperimentalPowerModule
+  description: A part of the experimental laser drill with an internal self-charging battery. Useless on its own. Connects to the trigger module.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+    state: power-module
+
+- type: entity
+  name: incomplete experimental laser drill
+  parent: BaseItem
+  id: IncompleteExperimentalLaserDrill
+  description: An incomplete experimental laser drill. Attach a head module to finish assembling.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+    state: incomplete-module
+
+- type: entity
+  name: experimental mining beam module
+  parent: BaseItem
+  id: ExperimentalMiningBeamModule
+  description: One of the head modules for the experimental laser drill. It is designed to be used for mining, not powerful enough to be used as a weapon.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+    state: miningbeam-module

@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Created by f0x-n3rd; Sprites by Palourde, for Space Station 14",
+    "size": {
+    "x": 32,
+    "y": 32
+    },
+    "states": [
+        {
+            "name": "trigger-module"
+        },
+        {
+            "name": "power-module"
+        },
+        {
+            "name": "incomplete-module"
+        },
+        {
+            "name": "laserbeam-module"
+        },
+        {
+            "name": "tractorbeam-module"
+        },
+        {
+            "name": "miningbeam-module"
+        }
+    ]
+}
