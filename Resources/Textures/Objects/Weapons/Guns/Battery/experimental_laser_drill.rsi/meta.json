@@ -26,6 +26,24 @@
         },
         {
             "name": "mag-unshaded-2"
+        },
+        {
+            "name": "trigger-module"
+        },
+        {
+            "name": "power-module"
+        },
+        {
+            "name": "incomplete-module"
+        },
+        {
+            "name": "laserbeam-module"
+        },
+        {
+            "name": "miningbeam-module"
+        },
+        {
+            "name": "tractorbeam-module"
         }
     ]
 }
