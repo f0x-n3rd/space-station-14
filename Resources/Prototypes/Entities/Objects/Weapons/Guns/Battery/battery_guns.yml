@@ -873,6 +873,7 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.6
     sprintModifier: 0.6
+  - type: HeldSpeedModifier
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/experimental_laser_drill.rsi
     layers:
@@ -883,20 +884,23 @@
       shader: unshaded
   - type: MagazineVisuals
     magState: mag
-    steps: 2
+    steps: 3
     zeroVisible: true
+  - type: Appearance
   - type: Gun
-    fireRate: 0.5
+    selectedMode: FullAuto
+    fireRate: 3.5
+    availableModes:
+      - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: RedHeavyLaser
+    proto: ExperimentalDrillLaser
     fireCost: 100
   - type: Battery
-    maxCharge: 1500
-    startingCharge: 1500
+    maxCharge: 3000
+    startingCharge: 3000
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 50
-    autoRechargePause: true
-    autoRechargePauseTime: 30
+    autoRechargeRate: 75
+
