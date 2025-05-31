@@ -102,3 +102,37 @@
     Gold: 500
     Silver: 500
 
+- type: latheRecipe
+  id: ExperimentalTriggerModule
+  result: ExperimentalTriggerModule
+  categories:
+  - Parts
+  completetime: 5
+  materials:
+    Steel: 1000
+    Silver: 500
+
+- type: latheRecipe
+  id: ExperimentalPowerModule
+  result: ExperimentalPowerModule
+  categories:
+  - Parts
+  completetime: 5
+  materials:
+    Steel: 1000
+    Silver: 500
+    Gold: 500
+    Plasma: 500
+    Uranium: 500
+
+- type: latheRecipe
+  id: ExperimentalMiningBeamModule
+  result: ExperimentalMiningBeamModule
+  categories:
+  - Parts
+  completetime: 5
+  materials:
+    Steel: 1000
+    Silver: 700
+    Gold: 300
+    Diamond: 200

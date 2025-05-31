@@ -180,6 +180,9 @@
   recipeUnlocks:
     - OreBagOfHolding
     - MiningDrillDiamond
+    - ExperimentalTriggerModule
+    - ExperimentalPowerModule
+    - ExperimentalMiningBeamModule
     - AdvancedMineralScannerEmpty
     - BorgModuleAdvancedMining
 

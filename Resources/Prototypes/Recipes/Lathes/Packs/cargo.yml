@@ -19,6 +19,9 @@
   recipes:
   - MiningDrill
   - MiningDrillDiamond
+  - ExperimentalTriggerModule
+  - ExperimentalPowerModule
+  - ExperimentalMiningBeamModule
   - MineralScannerEmpty
   - AdvancedMineralScannerEmpty
   - OreBagOfHolding
