@@ -1,0 +1,59 @@
+- type: constructionGraph
+  id: laserDrill
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: step2Laserdrill
+      steps:
+      - tag: LaserDrillModuleTrigger
+        name: construction-graph-tag-glass-shard
+        icon:
+          sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+          state: trigger-module
+      - tag: LaserDrillModulePower
+        name: construction-graph-tag-glass-shard
+        icon:
+          sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+          state: power-module
+      - material: Cable
+        amount: 3
+        doAfter: 1
+
+  - node: step2Laserdrill
+    entity: IncompleteExperimentalLaserDrillScrewing
+    edges:
+    - to: step3Laserdrill
+      steps:
+      - tool: Screwing
+        doAfter: 1
+
+  - node: step3Laserdrill
+    entity: IncompleteExperimentalLaserDrill
+    edges:
+    - to: step4Laserdrill
+      steps:
+      - tag: LaserDrillModuleBeam
+        name: construction-graph-tag-glass-shard
+        icon:
+          sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+          state: miningbeam-module
+      - material: CableMV
+        amount: 3
+        doAfter: 1
+
+  - node: step4Laserdrill
+    entity: IncompleteExperimentalLaserDrillAnchoring
+    edges:
+    - to: finalized
+      steps:
+      - tool: Anchoring
+        doAfter: 1
+
+  - node: finalized
+    entity: ExperimentalLaserDrill
+    edges:
+    - to: step4Laserdrill
+      steps:
+      - tool: Anchoring
+        doAfter: 10

@@ -869,6 +869,9 @@
   components:
   - type: Item
     size: Ginormous
+  - type: Construction
+    graph: laserDrill
+    node: finalized
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
     walkModifier: 0.7

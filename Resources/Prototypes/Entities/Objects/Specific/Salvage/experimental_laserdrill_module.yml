@@ -9,6 +9,9 @@
   - type: Sprite
     sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
     state: trigger-module
+  - type: Tag
+    Tags:
+    - LaserDrillModuleTrigger
 
 - type: entity
   name: experimental power module
@@ -20,17 +23,9 @@
   - type: Sprite
     sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
     state: power-module
-
-- type: entity
-  name: incomplete experimental laser drill
-  parent: BaseItem
-  id: IncompleteExperimentalLaserDrill
-  description: An incomplete experimental laser drill. Attach a head module to finish assembling.
-  components:
-  - type: Item
-  - type: Sprite
-    sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
-    state: incomplete-module
+  - type: Tag
+    Tags:
+    - LaserDrillModulePower
 
 - type: entity
   name: experimental mining beam module
@@ -42,3 +37,51 @@
   - type: Sprite
     sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
     state: miningbeam-module
+  - type: Tag
+    Tags:
+    - LaserDrillModuleBeam
+
+- type: entity
+  name: incomplete experimental laser drill
+  parent: BaseItem
+  id: IncompleteExperimentalLaserDrillScrewing
+  description: An incomplete experimental laser drill. Need to fasten the screw
+  suffix: "Screwing"
+  components:
+  - type: Item
+  - type: Construction
+    graph: laserDrill
+    node: step2Laserdrill
+  - type: Sprite
+    sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+    state: incomplete-module
+
+- type: entity
+  name: incomplete experimental laser drill
+  parent: BaseItem
+  id: IncompleteExperimentalLaserDrill
+  description: An incomplete experimental laser drill. Attach a head module to finish assembling.
+  suffix: "Assembly"
+  components:
+  - type: Item
+  - type: Construction
+    graph: laserDrill
+    node: step3Laserdrill
+  - type: Sprite
+    sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+    state: incomplete-module
+
+- type: entity
+  name: incomplete experimental laser drill
+  parent: BaseItem
+  id: IncompleteExperimentalLaserDrillAnchoring
+  description: An incomplete experimental laser drill. Anchor the part in place
+  suffix: "Anchoring"
+  components:
+  - type: Item
+  - type: Construction
+    graph: laserDrill
+    node: step4Laserdrill
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/experimental_laser_drill.rsi
+    state: base

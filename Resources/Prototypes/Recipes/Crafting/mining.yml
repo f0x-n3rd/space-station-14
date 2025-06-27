@@ -1,0 +1,7 @@
+- type: construction
+  id: laserDrill
+  graph: laserDrill
+  startNode: start
+  targetNode: finalized
+  category: construction-category-tool
+  objectType: Item

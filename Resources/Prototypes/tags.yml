@@ -824,6 +824,15 @@
   id: Knife
 
 - type: Tag
+  id: LaserDrillModuleBeam
+
+- type: Tag
+  id: LaserDrillModulePower
+
+- type: Tag
+  id: LaserDrillModuleTrigger
+
+- type: Tag
   id: LavaBrig
 
 - type: Tag
