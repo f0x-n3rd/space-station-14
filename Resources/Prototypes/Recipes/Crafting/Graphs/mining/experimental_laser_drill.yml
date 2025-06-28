@@ -7,15 +7,43 @@
     - to: step2Laserdrill
       steps:
       - tag: LaserDrillModuleTrigger
-        name: construction-graph-tag-glass-shard
+        name: construction-graph-tag-experimental-trigger-module
         icon:
           sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
           state: trigger-module
       - tag: LaserDrillModulePower
-        name: construction-graph-tag-glass-shard
+        name: construction-graph-tag-experimental-power-module
         icon:
           sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
           state: power-module
+      - material: Cable
+        amount: 3
+        doAfter: 1
+
+  - node: triggerLaserdrill
+    entity: ExperimentalTriggerModule
+    edges:
+    - to: step2Laserdrill
+      steps:
+      - tag: LaserDrillModulePower
+        name: construction-graph-tag-experimental-power-module
+        icon:
+          sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+          state: power-module
+      - material: Cable
+        amount: 3
+        doAfter: 1
+
+  - node: powerLaserdrill
+    entity: ExperimentalPowerModule
+    edges:
+    - to: step2Laserdrill
+      steps:
+      - tag: LaserDrillModuleTrigger
+        name: construction-graph-tag-experimental-trigger-module
+        icon:
+          sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+          state: trigger-module
       - material: Cable
         amount: 3
         doAfter: 1
@@ -27,6 +55,17 @@
       steps:
       - tool: Screwing
         doAfter: 1
+    - to: powerLaserdrill
+      completed:
+      - !type:SpawnPrototype
+        prototype: CableApcStack
+        amount: 3
+      - !type:SpawnPrototype
+        prototype: ExperimentalTriggerModule
+        amount: 1
+      steps:
+      - tool: Cutting
+        doAfter: 1
 
   - node: step3Laserdrill
     entity: IncompleteExperimentalLaserDrill
@@ -34,12 +73,16 @@
     - to: step4Laserdrill
       steps:
       - tag: LaserDrillModuleBeam
-        name: construction-graph-tag-glass-shard
+        name: construction-graph-tag-experimental-mining-beam-module
         icon:
           sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
           state: miningbeam-module
       - material: CableMV
         amount: 3
+        doAfter: 1
+    - to: step2Laserdrill
+      steps:
+      - tool: Screwing
         doAfter: 1
 
   - node: step4Laserdrill
@@ -49,6 +92,17 @@
       steps:
       - tool: Anchoring
         doAfter: 1
+    - to: step3Laserdrill
+      completed:
+      - !type:SpawnPrototype
+        prototype: CableMVStack1
+        amount: 3
+      - !type:SpawnPrototype
+        prototype: ExperimentalMiningBeamModule
+        amount: 1
+      steps:
+      - tool: Prying
+        doAfter: 1
 
   - node: finalized
     entity: ExperimentalLaserDrill
@@ -56,4 +110,4 @@
     - to: step4Laserdrill
       steps:
       - tool: Anchoring
-        doAfter: 10
+        doAfter: 1
