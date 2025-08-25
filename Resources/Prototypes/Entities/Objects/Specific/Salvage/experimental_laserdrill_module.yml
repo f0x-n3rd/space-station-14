@@ -9,6 +9,11 @@
   - type: Sprite
     sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
     state: trigger-module
+  - type: Tag
+    tag: ExperimentalLaserDrillTriggerModule
+  - type: Construction
+    graph: ExperimentalLaserDrill
+    node: ExperimentalLaserDrillTriggerModule
 
 - type: entity
   name: experimental power module
@@ -17,9 +22,15 @@
   description: A part of the experimental laser drill with an internal self-charging battery. Useless on its own. Connects to the trigger module.
   components:
   - type: Item
+    size: Small
   - type: Sprite
     sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
     state: power-module
+  - type: Tag
+    tag: ExperimentalLaserDrillPowerModule
+  - type: Construction
+    graph: ExperimentalLaserDrill
+    node: ExperimentalLaserDrillPowerModule
 
 - type: entity
   name: incomplete experimental laser drill
@@ -28,9 +39,15 @@
   description: An incomplete experimental laser drill. Attach a head module to finish assembling.
   components:
   - type: Item
+    size: Small
   - type: Sprite
     sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
     state: incomplete-module
+  - type: Tag
+    tag: IncompleteExperimentalLaserDrill
+  - type: Construction
+    graph: ExperimentalLaserDrill
+    node: IncompleteExperimentalLaserDrill
 
 - type: entity
   name: experimental mining beam module
@@ -39,6 +56,46 @@
   description: One of the head modules for the experimental laser drill. It is designed to be used for mining, not powerful enough to be used as a weapon.
   components:
   - type: Item
+    size: Small
   - type: Sprite
     sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
     state: miningbeam-module
+  - type: Tag
+    tag: ExperimentalLaserDrillMiningBeamModule
+  - type: Construction
+    graph: ExperimentalLaserDrill
+    node: ExperimentalLaserDrillMiningBeamModule
+
+- type: entity
+  name: wired experimental trigger module
+  parent: BaseItem
+  id: ExperimentalTriggerModuleWired
+  description: Ready to be connected to the power module!
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+    state: trigger-module-wired
+  - type: Tag
+    tag: ExperimentalLaserDrillTriggerModuleWired
+  - type: Construction
+    graph: ExperimentalLaserDrill
+    node: ExperimentalLaserDrillTriggerModuleWired
+
+- type: entity
+  name: wired incomplete experimental laser drill
+  parent: BaseItem
+  id: IncompleteExperimentalLaserDrillWired
+  description: Just needs the Mining Beam Module to be complete!
+  components:
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+      state: incomplete-module-wired
+    - type: Tag
+      tag: IncompleteExperimentalLaserDrillWired
+    - type: Construction
+      graph: ExperimentalLaserDrill
+      node: IncompleteExperimentalLaserDrillWired

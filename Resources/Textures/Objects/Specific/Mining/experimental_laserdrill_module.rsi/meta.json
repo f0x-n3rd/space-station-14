@@ -24,6 +24,12 @@
         },
         {
             "name": "miningbeam-module"
+        },
+        {
+            "name": "incomplete-module-wired"
+        },
+        {
+            "name": "trigger-module-wired"
         }
     ]
 }
