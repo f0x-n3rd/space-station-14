@@ -1,0 +1,7 @@
+- type: construction
+  id: ExperimentalLaserDrill
+  graph: ExperimentalLaserDrill
+  startNode: start
+  targetNode: ExperimentalLaserDrill
+  category: construction-category-tools
+  objectType: Item

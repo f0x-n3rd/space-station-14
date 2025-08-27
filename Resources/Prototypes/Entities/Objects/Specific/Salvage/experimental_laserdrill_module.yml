@@ -11,9 +11,6 @@
     state: trigger-module
   - type: Tag
     tag: ExperimentalLaserDrillTriggerModule
-  - type: Construction
-    graph: ExperimentalLaserDrill
-    node: ExperimentalLaserDrillTriggerModule
 
 - type: entity
   name: experimental power module
@@ -28,9 +25,6 @@
     state: power-module
   - type: Tag
     tag: ExperimentalLaserDrillPowerModule
-  - type: Construction
-    graph: ExperimentalLaserDrill
-    node: ExperimentalLaserDrillPowerModule
 
 - type: entity
   name: incomplete experimental laser drill
@@ -45,9 +39,6 @@
     state: incomplete-module
   - type: Tag
     tag: IncompleteExperimentalLaserDrill
-  - type: Construction
-    graph: ExperimentalLaserDrill
-    node: IncompleteExperimentalLaserDrill
 
 - type: entity
   name: experimental mining beam module
@@ -62,9 +53,6 @@
     state: miningbeam-module
   - type: Tag
     tag: ExperimentalLaserDrillMiningBeamModule
-  - type: Construction
-    graph: ExperimentalLaserDrill
-    node: ExperimentalLaserDrillMiningBeamModule
 
 - type: entity
   name: wired experimental trigger module
@@ -79,9 +67,6 @@
     state: trigger-module-wired
   - type: Tag
     tag: ExperimentalLaserDrillTriggerModuleWired
-  - type: Construction
-    graph: ExperimentalLaserDrill
-    node: ExperimentalLaserDrillTriggerModuleWired
 
 - type: entity
   name: wired incomplete experimental laser drill
@@ -96,6 +81,3 @@
       state: incomplete-module-wired
     - type: Tag
       tag: IncompleteExperimentalLaserDrillWired
-    - type: Construction
-      graph: ExperimentalLaserDrill
-      node: IncompleteExperimentalLaserDrillWired

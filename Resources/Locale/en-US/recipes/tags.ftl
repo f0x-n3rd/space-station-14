@@ -148,3 +148,4 @@ construction-graph-tag-experimental-power-module = experimental power module
 construction-graph-tag-experimental-mining-beam-module = experimental mining beam module
 construction-graph-tag-experimental-trigger-module-wired = wired experimental trigger module
 construction-graph-tag-incomplete-experimental-laser-drill-wired = wired incomplete laser drill
+construction-graph-tag-incomplete-experimental-laser-drill = incomplete laser drill

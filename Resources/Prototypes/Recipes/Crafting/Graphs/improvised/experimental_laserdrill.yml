@@ -4,7 +4,7 @@
   graph:
   - node: start
     edges:
-    - to: ExperimentalLaserDrillTriggerModuleWired
+    - to: ExperimentalTriggerModuleWired
       steps:
       - tag: ExperimentalTriggerModule
         name: construction-graph-tag-trigger-module
@@ -12,55 +12,40 @@
           sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
           state: trigger-module
       - material: Cable
-        amount: 3
+        amount: 2
         doAfter: 1
-  - node: ExperimentalLaserDrillTriggerModuleWired
+  - node: ExperimentalTriggerModuleWired
+    entity: ExperimentalTriggerModuleWired
     edges:
-    - to: IncompleteExperimentalLaserDrill
+    - to: IncomepleteExperimentalLaserDrill
       steps:
-      - tag: ExperimentalLaserDrillTriggerModuleWired
+      - tag: ExperimentalTriggerModuleWired
         name: construction-graph-tag-trigger-module-wired
         icon:
           sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
           state: trigger-module-wired
-      - tag: ExperimentalLaserDrillPowerModule
+      - tag: ExperimentalPowerModule
         name: construction-graph-tag-power-module
         icon:
           sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
           state: power-module
       - tool: Screwing
         doAfter: 1
-    - node: IncompleteExperimentalLaserDrill
-      entity: IncompleteExperimentalLaserDrill
-      edges:
-      - to: IncompleteExperimentalLaserDrillWired
-        steps:
-        - tag: IncompleteExperimentalLaserDrill
-          name: construction-graph-tag-incomplete-laser-drill
-          icon:
-            sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
-            state: incomplete-module
-        - material: Cable
-          amount: 2
-        - tool: Screwing
-          doAfter: 1
-    - node: IncompleteExperimentalLaserDrillWired
-      entity: IncompleteExperimentalLaserDrillWired
-      edges:
-      - to: ExperimentalLaserDrill
-        steps:
-        - tag: IncompleteExperimentalLaserDrillWired
-          name: construction-graph-tag-incomplete-laser-drill-wired
-          icon:
-            sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
-            state: incomplete-module
-        - tag: ExperimentalLaserDrillMiningBeamModule
-          name: construction-graph-tag-mining-beam-module
-          icon:
-            sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
-            state: miningbeam-module
-        - tool: Anchoring
-          doAfter: 1
-      #wat the fuck do I do next? am I doing this right?
-
+  - node: IncompleteExperimentalLaserDrill
+    entity: IncompleteExperimentalLaserDrill
+    edges:
+    - to: IncompleteExperimentalLaserDrillWired
+      steps:
+      - tag: IncompleteExperimentalLaserDrill
+        name: construction-graph-tag-incomplete-laser-drill
+        icon:
+          sprite: Objects/Specific/Mining/experimental_laserdrill_module.rsi
+          state: incomplete-module
+      - material: Cable
+        amount: 2
+      - tool: Screwing
+        doAfter: 1
+  - node: IncompleteExperimentalLaserDrillWired
+    entity: IncompleteExperimentalLaserDrillWired
+# Am I doing this right?
 
